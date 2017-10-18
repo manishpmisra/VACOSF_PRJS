@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="style/common.css" rel="stylesheet" />
+    <script>
+        function GetEvensOrOdds(evenoddtxtboxid) {
+            var results = "";
+
+            //Pulling the value from textboxes
+            var numF = document.getElementById("numFirst").value;
+            var numS = document.getElementById("numSecond").value;
+
+            //add logic to generate the list of Odds between first and second no
+            for (indx = parseInt(numF); indx <= parseInt(numS); indx++){
+                if (evenoddtxtboxid == "txtNumOdds") {
+                    if (indx % 2 != 0) {
+                        results = results + indx.toString() + ", ";
+                    }
+                }
+                else if (evenoddtxtboxid == "txtNumEvens") {
+                    if (indx % 2 == 0) {
+                        results = results + indx.toString() + ", ";
+                    }
+                }
+            }
+
+            //Post the result to output textbox
+            var resultTextBox = document.getElementById(evenoddtxtboxid);
+            results = results.substring(0, results.length - 2);
+            resultTextBox.value = results;
+
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <input type="number" id="numFirst" />
+    </div>
+    <div>
+        <input type="number" id="numSecond" />
+    </div>
+    <div>
+        <input class="clsButton" type="button" value="Get All Odds" onclick="GetEvensOrOdds('txtNumOdds')" />
+        <input class="clsButton" type="button" value="Get All Evens" onclick="GetEvensOrOdds('txtNumEvens')"/>
+    </div>
+    <div>
+        <div>
+            <label>Odds: </label>
+        </div>
+        <div>
+            <input type="text" id="txtNumOdds" />
+        </div>
+    </div>
+    <div>
+        <div>
+            <label>Evens: </label>
+        </div>
+        <div>
+            <input type="text" id="txtNumEvens" />
+        </div>
+    </div>
+</body>
+</html>
