@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="b62f726b-e0f6-4380-b6ed-217cffea1c88" 
+        solutionId="b62f726b-e0f6-4380-b6ed-217cffea1c88" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="ServiceDeliveryApp"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="b47330ec-61f6-429b-9248-d7463842baa1" />
+  </features>
+</package>
